@@ -66,6 +66,3 @@ class OrderPageLocators:
 
     # надпись "Заказ оформлен"
     processed_order = [By.XPATH, ".//div[text()='Заказ оформлен']"]
-
-    # логотип "Самокат"
-    scooter_logo = [By.XPATH, ".//a[@class='Header_LogoScooter__3lsAR']"]

@@ -62,11 +62,5 @@ class MainPageLocators:
     # ответ "Да, обязательно. Всем самокатов! И Москве, и Московской области."
     delivery_area_answer = [By.XPATH, ".//div[@id='accordion__panel-7']/child::p"]
 
-    # кнопка "Заказать" в шапке страницы
-    order_button_top = [By.XPATH, ".//button[@class='Button_Button__ra12g']"]
-
     # кнопка "Заказать" внизу страницы
     order_button_low = [By.XPATH, ".//div[@class='Home_FinishButton__1_cWm']/child::button"]
-
-    # логотип "Яндеск"
-    yandex_logo = [By.XPATH, ".//a[@href='//yandex.ru']"]

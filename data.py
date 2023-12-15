@@ -1,3 +1,6 @@
+from locators.main_page_locators import MainPageLocators
+
+
 class UrlPageData:
     MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
     ORDER_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/order'
@@ -29,3 +32,17 @@ class AnswerTextData:
     cancel = 'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.'
 
     delivery_area = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'
+
+
+# параметры для тестирования блока Важные вопросы
+question_answer_text = \
+    [
+        [MainPageLocators.price_question, MainPageLocators.price_answer, AnswerTextData.price],
+        [MainPageLocators.several_scooters_question, MainPageLocators.several_scooters_answer, AnswerTextData.several],
+        [MainPageLocators.time_rent_question, MainPageLocators.time_rent_answer, AnswerTextData.time_rent],
+        [MainPageLocators.today_order_question, MainPageLocators.today_order_answer, AnswerTextData.today_order],
+        [MainPageLocators.extension_question, MainPageLocators.extension_answer, AnswerTextData.extension],
+        [MainPageLocators.charger_question, MainPageLocators.charger_answer, AnswerTextData.charger],
+        [MainPageLocators.cancel_question, MainPageLocators.cancel_answer, AnswerTextData.cancel],
+        [MainPageLocators.delivery_area_question, MainPageLocators.delivery_area_answer, AnswerTextData.delivery_area]
+    ]

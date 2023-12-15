@@ -3,11 +3,10 @@ from selenium.webdriver.support import expected_conditions
 import allure
 
 from locators.order_page_locators import OrderPageLocators
+from pages.base_page import BasePage
 
 
-class OrderPage:
-    def __init__(self, driver):
-        self.driver = driver
+class OrderPage(BasePage):
 
     @allure.step('Вводим значение в поле Имя')
     def set_name_input(self, name):
@@ -72,11 +71,6 @@ class OrderPage:
         self.driver.find_element(*OrderPageLocators.yes_button).click()
         WebDriverWait(self.driver, 5) \
             .until(expected_conditions.visibility_of_element_located(OrderPageLocators.processed_order))
-
-    @allure.step('Получаем текст Заказ оформлен')
-    def get_processed_order_text(self):
-        text = self.driver.find_element(*OrderPageLocators.processed_order).text
-        return text
 
     def full_order_flow(self, name, surname, address, station, number, date, period):
         self.set_name_input(name)
